@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="description" content="Projects by Sahus Gupta" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Projects | Sahus Gupta</title>
+  <!-- AOS CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css"/>
+  <!-- Main CSS -->
+  <link rel="stylesheet" href="assets/css/style.css"/>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="navbar">
+    <div class="navbar__brand">
+      <a href="index.html" class="brand__logo">Sahus Gupta</a>
+      <button class="brand__toggle" aria-label="Toggle menu">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
+    </div>
+    <ul class="navbar__links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="projects.html" class="active">Projects</a></li>
+      <li><a href="experience.html">Experience</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <section class="projects-section container" data-aos="fade-right">
+    <h1>My Projects</h1>
+
+    <!-- PROJECT 1: GRADUS APP -->
+    <div class="project-item">
+      <h2>Gradus App</h2>
+      <p><strong>Tech Stack:</strong> Flutter, Puppeteer.js (Node), Python, Golang</p>
+      <p>
+        A collaborative effort with two fellow students to retrieve grades 
+        from Katy ISD’s online portal. The Gradus app now has users in 176+ 
+        countries. I led the backend architecture, ensuring safe data 
+        scraping and a seamless user interface.
+      </p>
+    </div>
+
+    <!-- PROJECT 2: SYS PROCTORING -->
+    <div class="project-item" data-aos="fade-left">
+      <h2>Sys Proctoring</h2>
+      <p><strong>Tech Stack:</strong> Python, React.js, Canvas LTI</p>
+      <p>
+        Building a cheaper, more robust online proctoring tool for academic 
+        institutions. Mentored by Julie Ross (Instructure) and aimed to 
+        save the local district ~$300,000. The system uses AI to detect 
+        anomalies and integrates directly with Canvas to streamline 
+        administration.
+      </p>
+    </div>
+
+    <!-- PROJECT 3: PLATOAI -->
+    <div class="project-item" data-aos="fade-right">
+      <h2>PlatoAI (Startup)</h2>
+      <p><strong>Tech Stack:</strong> Flask (Python), JavaScript, OpenAI API, Postgres</p>
+      <p>
+        A platform to guide students with college essays through AI-driven 
+        feedback. Helped 4,000+ students globally before being acquired 
+        by Sups.AI. Led the backend dev and data security, ensuring 
+        consistent performance and stable user experience.
+      </p>
+    </div>
+
+    <!-- PROJECT 4: NASA SPACE APPS -->
+    <div class="project-item" data-aos="fade-left">
+      <h2>NASA Space Apps Challenge</h2>
+      <p><strong>Awards:</strong> Best Use of Tech (Houston), Global Nominee, International Honorable Mention</p>
+      <p>
+        Developed a real-time farmland management tool using Streamlit 
+        (Python), OpenWeatherMap API, and AI-based RAG (Retrieval-Augmented 
+        Generation). Won Best Use of Technology in Houston, placing us among 
+        the top 0.4% globally.
+      </p>
+    </div>
+
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <p>© <span id="year"></span> Sahus Gupta</p>
+  </footer>
+
+  <!-- AOS JS -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="assets/js/script.js"></script>
+</body>
+</html>
