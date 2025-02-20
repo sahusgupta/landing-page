@@ -348,4 +348,93 @@
       text-align: center;
     }
   }
+  body {
+    font-family: 'Montserrat', sans-serif;
+    color: #fff;
+    background-color: #000;
+    /* Increase default line-height for better readability */
+    line-height: 1.7;
+  }
   
+  /* Container with extra vertical spacing */
+  .container {
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
+    /* Increased top & bottom padding for breathing room */
+    padding: 3rem 1rem;
+  }
+  
+  /* NAV HOVER TRANSITIONS */
+  .nav-hover {
+    position: relative;
+    transition: color 0.3s ease;
+  }
+  .nav-hover::after {
+    content: "";
+    position: absolute;
+    left: 0; bottom: -2px;
+    width: 0%;
+    height: 2px;
+    background-color: #00b0ff;
+    transition: width 0.3s ease;
+  }
+  .nav-hover:hover {
+    color: #00b0ff;
+  }
+  .nav-hover:hover::after {
+    width: 100%;
+  }
+  
+  /* HERO SECTION WAVE */
+  .hero-section {
+    min-height: 80vh;
+    background: url('../img/hero-bg.jpg') center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    padding: 4rem 2rem;
+  }
+  
+  .hero-content {
+    position: relative;
+    z-index: 2;
+    /* Increase spacing from top if needed */
+  }
+  
+  .wave-divider {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    z-index: 2;
+  }
+  
+  .wave-divider svg {
+    display: block;
+    width: calc(100% + 1.3px); /* ensures no gap on wide screens */
+  }
+  
+  /* TYPED SUBTITLE STYLING */
+  .hero-subtitle {
+    font-size: 1.4rem;
+    min-height: 2.2em; /* so the text doesn't jump the layout if typed text is multiline */
+    margin-bottom: 2rem;
+  }
+  
+  /* CARDS HOVER TRANSITION */
+  .card-hover {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  .card-hover:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 6px 15px rgba(0, 176, 255, 0.3);
+  }
+  
+  /* EXTRA SPACING FOR INTRO TEXT */
+  .intro-section p {
+    margin-bottom: 1rem;
+  }

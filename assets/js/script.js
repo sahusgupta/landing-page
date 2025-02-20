@@ -1,17 +1,17 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // 1) Initialize AOS
+    // ========== INIT AOS ==========
     AOS.init({
-      duration: 1000, // animation duration in ms
-      once: false,    // whether animation should happen only once
+      duration: 1000,
+      once: false,
     });
   
-    // 2) Set current year in footer
+    // ========== YEAR IN FOOTER ==========
     const yearEl = document.getElementById('year');
     if(yearEl) {
       yearEl.textContent = new Date().getFullYear();
     }
   
-    // 3) Hamburger menu toggle
+    // ========== NAV TOGGLE (Hamburger) ==========
     const toggleBtn = document.querySelector('.brand__toggle');
     const navLinks = document.querySelector('.navbar__links');
   
@@ -21,13 +21,35 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     }
   
-    // 4) Contact form submission
+    // ========== TYPED.JS EFFECT ==========
+    // Make sure typed.js is loaded in index.html (see above)
+    const typedEl = document.getElementById('typed');
+    if(typedEl) {
+      new Typed('#typed', {
+        strings: [
+          "High School Student",
+          "Developer",
+          "AI Enthusiast",
+          "Tennis Coach",
+          "Math Lover at 2am",
+        ],
+        typeSpeed: 60,
+        backSpeed: 40,
+        backDelay: 1200,
+        loop: true,
+      });
+    }
+  
+    // ========== CONTACT FORM (EmailJS or Alert) ==========
     const contactForm = document.getElementById('contactForm');
     if(contactForm) {
-      contactForm.addEventListener('submit', (event) => {
-        event.preventDefault();
-        // Simple demonstration - replace with a real email-handling service
-        alert('Thank you! Your message has been sent. (This is a demo.)');
+      contactForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        // For EmailJS, just as an example:
+        //const templateParams = {...};
+        //emailjs.send("SERVICE_ID","TEMPLATE_ID",templateParams);
+  
+        alert("Thanks! Your message has been submitted. (Demo)");
         contactForm.reset();
       });
     }
