@@ -10,17 +10,25 @@
                 font-family: 'Arial', sans-serif;
                 background: linear-gradient(to right, #141E30, #243B55);
                 color: white;
+                text-align: center;
             }
-            .inner {
-                max-width: 900px;
+            .container {
+                max-width: 1100px;
                 margin: auto;
                 padding: 20px;
-                background: rgba(0, 0, 0, 0.7);
+            }
+            .section {
+                background: rgba(0, 0, 0, 0.8);
+                padding: 20px;
+                margin: 20px 0;
                 border-radius: 10px;
                 box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+                transition: transform 0.3s;
+            }
+            .section:hover {
+                transform: scale(1.02);
             }
             h1, h2 {
-                text-align: center;
                 color: #00c6ff;
             }
             ul {
@@ -41,44 +49,59 @@
         </style>
     </head>
     <body>
-        <div class="inner">
-            <h1>Sahus Gupta</h1>
-            <p>Innovator | Computer Scientist | AI Enthusiast</p>
-            <p>Building intelligent solutions to bridge education and technology.</p>
+        <div class="container">
+            <div class="section">
+                <h1>Sahus Gupta</h1>
+                <p>Innovator | Computer Scientist | AI Enthusiast</p>
+                <p>Building intelligent solutions to bridge education and technology.</p>
+            </div>
             
-            <h2>Experience & Projects</h2>
-            <ul>
-                <li><strong>Plato AI (Co-founder)</strong> - AI-powered college essay assistance platform, acquired by Sups.AI.</li>
-                <li><strong>NASA International Space Apps Challenge</strong> - AI-driven farming advisory tool, top 60 globally.</li>
-                <li><strong>Limelight</strong> - Web platform for research-based learning and mentorship.</li>
-                <li><strong>Machine Learning Curriculum Development</strong> - High school ML curriculum for AI literacy.</li>
-                <li><strong>Gradus App</strong> - Flutter-based grade tracking app, active in 176 countries.</li>
-                <li><strong>Stealth Startup</strong> - Advanced AI-powered proctoring system to enhance academic integrity.</li>
-            </ul>
+            <div class="section">
+                <h2>Experience & Projects</h2>
+                <ul>
+                    <li><strong>Plato AI (Co-founder)</strong> - AI-powered college essay assistance platform, acquired by Sups.AI.</li>
+                    <li><strong>NASA International Space Apps Challenge</strong> - AI-driven farming advisory tool, top 60 globally.</li>
+                    <li><strong>Limelight</strong> - Research-based learning platform for students.</li>
+                    <li><strong>Machine Learning Curriculum Development</strong> - Designed high school ML curriculum.</li>
+                    <li><strong>Gradus App</strong> - Grade tracking app, launched in 176 countries.</li>
+                    <li><strong>Stealth Startup</strong> - Advanced AI-powered proctoring system improving academic integrity.</li>
+                    <li><strong>JV/Varsity Tennis Team</strong> - Medaled in 6 regional tournaments and coached younger athletes.</li>
+                    <li><strong>Computer Science Club</strong> - Organized and competed in hackathons and coding competitions.</li>
+                    <li><strong>NASA Space Apps Competition</strong> - Advisor and competitor, recognized for best use of technology.</li>
+                    <li><strong>Research & Development</strong> - Built environmental prediction models using machine learning.</li>
+                </ul>
+            </div>
             
-            <h2>Education & Skills</h2>
-            <p><strong>Obra D. Tompkins High School | Katy, TX</strong> - STEM Endorsement | 3.795 GPA</p>
-            <p>Completed 17 AP Classes, including AP Computer Science A, AP Statistics, AP Calculus BC, and Multivariable Calculus.</p>
-            <ul>
-                <li>Programming: Python (NumPy, Pandas, Scikit-Learn), Java, Dart, JavaScript, Golang, R</li>
-                <li>AI & Data Science: Machine Learning, Data Analytics, Optimization Algorithms</li>
-                <li>Leadership: Co-founded startups, secured global recognition in competitions</li>
-            </ul>
+            <div class="section">
+                <h2>Education & Skills</h2>
+                <p><strong>Obra D. Tompkins High School | Katy, TX</strong> - STEM Endorsement | 3.795 GPA</p>
+                <p>Completed 17 AP Classes, including AP Computer Science A, AP Statistics, AP Calculus BC, and Multivariable Calculus.</p>
+                <ul>
+                    <li>Programming: Python (NumPy, Pandas, Scikit-Learn), Java, Dart, JavaScript, Golang, R</li>
+                    <li>AI & Data Science: Machine Learning, Data Analytics, Optimization Algorithms</li>
+                    <li>Leadership: Co-founded startups, secured global recognition in competitions</li>
+                    <li>Sports & Teamwork: Competitive tennis player and mentor for younger athletes</li>
+                </ul>
+            </div>
             
-            <h2>Honors & Certifications</h2>
-            <ul>
-                <li>National Merit Finalist (Top 1% PSAT score, 1480 composite)</li>
-                <li>International Honorable Mention | 2024 NASA Space Apps Challenge (Top 0.4% of teams globally)</li>
-                <li>AP Capstone Diploma</li>
-                <li>NASA Space Apps Global Nominee</li>
-                <li>Google Data Analytics Certification</li>
-                <li>IBM Machine Learning with Python Certification</li>
-            </ul>
+            <div class="section">
+                <h2>Honors & Certifications</h2>
+                <ul>
+                    <li>National Merit Finalist (Top 1% PSAT score, 1480 composite)</li>
+                    <li>International Honorable Mention | 2024 NASA Space Apps Challenge (Top 0.4% of teams globally)</li>
+                    <li>AP Capstone Diploma</li>
+                    <li>NASA Space Apps Global Nominee</li>
+                    <li>Google Data Analytics Certification</li>
+                    <li>IBM Machine Learning with Python Certification</li>
+                </ul>
+            </div>
             
-            <h2>Get in Touch</h2>
-            <p>Email: <a href="mailto:sahusgupta@gmail.com">sahusgupta@gmail.com</a></p>
-            <p>LinkedIn: <a href="https://www.linkedin.com/in/sahus-gupta-14495127b/">linkedin.com/in/sahus-gupta</a></p>
-            <p>GitHub: <a href="https://github.com/sahusgupta">github.com/sahusgupta</a></p>
+            <div class="section">
+                <h2>Get in Touch</h2>
+                <p>Email: <a href="mailto:sahusgupta@gmail.com">sahusgupta@gmail.com</a></p>
+                <p>LinkedIn: <a href="https://www.linkedin.com/in/sahus-gupta-14495127b/">linkedin.com/in/sahus-gupta</a></p>
+                <p>GitHub: <a href="https://github.com/sahusgupta">github.com/sahusgupta</a></p>
+            </div>
         </div>
     </body>
 </html>
