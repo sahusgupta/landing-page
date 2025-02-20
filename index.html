@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Sahus Gupta | Home</title>
 
-  <!-- AOS Animation Library CSS -->
+  <!-- AOS (Animate On Scroll) CSS -->
   <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
 
   <!-- Typed.js (for typed text effect) -->
@@ -17,7 +17,9 @@
   <!-- Favicon (optional) -->
   <link rel="icon" href="assets/img/profile.jpg" />
 </head>
-<body>
+<body class="dark-mode">
+  <!-- Custom Cursor (hidden div that follows mouse) -->
+  <div id="custom-cursor"></div>
 
   <!-- ========== NAVBAR ========== -->
   <nav class="navbar">
@@ -36,13 +38,17 @@
       <li><a href="experience.html" class="nav-hover">Experience</a></li>
       <li><a href="contact.html" class="nav-hover">Contact</a></li>
     </ul>
+    <!-- Theme Toggle Button -->
+    <button id="themeToggle" class="theme-btn" aria-label="Toggle dark/light mode">
+      <span id="themeIcon">☀️</span>
+    </button>
   </nav>
 
   <!-- ========== HERO SECTION ========== -->
   <section class="hero-section">
     <div class="hero-content" data-aos="fade-up">
       <h1 class="hero-title">Hi, I’m <span class="highlight">Sahus Gupta</span></h1>
-      <!-- Typed text effect goes here -->
+      <!-- Typed text effect -->
       <p class="hero-subtitle">
         <span id="typed"></span>
       </p>
@@ -52,36 +58,41 @@
       </div>
     </div>
 
+    <!-- Scroll Down arrow with bounce animation -->
+    <a href="#introSection" class="scroll-down" aria-label="Scroll down">
+      <span class="arrow"></span>
+    </a>
+
     <!-- Wave shape divider at the bottom of the hero -->
     <div class="wave-divider">
-      <!-- This is just an SVG wave. You can modify shape/color at will. -->
       <svg viewBox="0 0 1440 320">
-        <path fill="#000" fill-opacity="1"
+        <path fill="currentColor" fill-opacity="1"
           d="M0,224L40,202.7C80,181,160,139,240,106.7C320,75,400,53,480,85.3C560,117,640,203,720,224C800,245,880,203,960,186.7C1040,171,1120,181,1200,165.3C1280,149,1360,107,1400,85.3L1440,64L1440,320L1400,320C1360,320,1280,320,1200,320C1120,320,1040,320,960,320C880,320,800,320,720,320C640,320,560,320,480,320C400,320,320,320,240,320C160,320,80,320,40,320L0,320Z">
         </path>
       </svg>
     </div>
   </section>
 
-  <!-- ========== QUICK INTRO/FEATURE SECTION ========== -->
-  <section class="intro-section container" data-aos="fade-in" data-aos-delay="300">
+  <!-- ========== INTRO/FEATURE SECTION ========== -->
+  <section id="introSection" class="intro-section container" data-aos="fade-in" data-aos-delay="300">
     <h2>Welcome to My Portfolio</h2>
     <p>
-      I’m a high school junior from Katy, Texas, with a knack for 
-      <strong>backend development</strong>, <strong>machine learning</strong>, and <strong>data science</strong>.
-      Over the years, I’ve built an <em>AI-based college essay guidance platform</em>, 
-      a <em>proctoring solution for schools</em>, and <em>mobile &amp; web apps</em> 
+      I’m a high school junior from Katy, Texas, with a knack for
+      <strong>backend development</strong>, <strong>machine learning</strong>, and
+      <strong>data science</strong>. Over the years, I’ve built an
+      <em>AI-based college essay guidance platform</em>, a
+      <em>proctoring solution for schools</em>, and <em>mobile &amp; web apps</em>
       used by thousands worldwide.
     </p>
     <p>
-      Browse through my <a href="projects.html">Projects</a> and 
-      <a href="experience.html">Experience</a> pages to learn more about my work. 
-      Or just <a href="contact.html">get in touch</a> to chat about potential 
+      Browse through my <a href="projects.html">Projects</a> and
+      <a href="experience.html">Experience</a> pages to learn more about my work.
+      Or just <a href="contact.html">get in touch</a> to chat about potential
       internship or freelance opportunities!
     </p>
   </section>
 
-  <!-- ========== QUICK PROJECT HIGHLIGHT CARDS ========== -->
+  <!-- ========== PROJECT HIGHLIGHT CARDS ========== -->
   <section class="highlight-projects container" data-aos="zoom-in" data-aos-delay="400">
     <h2 class="section-title">Featured Projects</h2>
     <div class="cards">
@@ -94,7 +105,7 @@
       <!-- Card 2 -->
       <div class="card card-hover">
         <h3>Sys Proctoring</h3>
-        <p>Proctoring service (Python + React.js) integrated with Canvas LTI for academic integrity, saving districts ~$300k.</p>
+        <p>Proctoring service (Python + React.js) integrated with Canvas LTI, saving districts ~$300k.</p>
         <a href="projects.html" class="card-link">See More</a>
       </div>
       <!-- Card 3 -->
@@ -108,7 +119,9 @@
 
   <!-- ========== FOOTER ========== -->
   <footer class="footer">
-    <p>© <span id="year"></span> Sahus Gupta • <a href="mailto:sahusgupta@gmail.com">sahusgupta@gmail.com</a></p>
+    <p>© <span id="year"></span> Sahus Gupta
+      • <a href="mailto:sahusgupta@gmail.com">sahusgupta@gmail.com</a>
+    </p>
   </footer>
 
   <!-- AOS Library JS -->

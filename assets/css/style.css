@@ -1,80 +1,52 @@
-/* GENERAL RESET & GLOBAL STYLES */
+/* ========== GLOBAL RESET & VARIABLES ========== */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
   }
   
-  html, body {
-    font-family: 'Montserrat', sans-serif;
-    color: #fff;
-    background-color: #000; /* black background */
-    overflow-x: hidden;
-    scroll-behavior: smooth;
+  :root {
+    /* Light theme colors */
+    --color-light-bg: #fff;
+    --color-light-text: #000;
+    /* Dark theme colors */
+    --color-dark-bg: #000;
+    --color-dark-text: #fff;
+  
+    /* Accent color (blue) */
+    --accent-color: #00b0ff;
   }
   
+  /* ========== BODY (THEME HANDLING) ========== */
+  body {
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.7;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  .light-mode {
+    background-color: var(--color-light-bg);
+    color: var(--color-light-text);
+  }
+  .dark-mode {
+    background-color: var(--color-dark-bg);
+    color: var(--color-dark-text);
+  }
+  
+  /* Links remain text color, but let's ensure accent on hover */
   a {
     text-decoration: none;
     color: inherit;
   }
   
-  h1, h2, h3, h4, h5, h6 {
-    font-weight: 600;
-  }
-  
-  p {
-    line-height: 1.6;
-  }
-  
-  .highlight {
-    color: #00b0ff; 
-  }
-  
-  /* UTILITY CLASSES */
+  /* ========== CONTAINER FOR SPACING ========== */
   .container {
     width: 90%;
     max-width: 1100px;
     margin: 0 auto;
-    padding: 2rem 0;
+    padding: 3rem 1rem;
   }
   
-  .section-title {
-    margin-bottom: 1rem;
-    font-size: 2rem;
-    color: #00b0ff;
-  }
-  
-  .btn {
-    display: inline-block;
-    padding: 0.75rem 1.25rem;
-    border-radius: 4px;
-    font-weight: 600;
-    cursor: pointer;
-    transition: background-color 0.3s ease, color 0.3s ease;
-    text-align: center;
-  }
-  
-  .btn-primary {
-    background-color: #00b0ff;
-    color: #000;
-  }
-  
-  .btn-primary:hover {
-    background-color: #008ac9;
-  }
-  
-  .btn-outline {
-    border: 2px solid #00b0ff;
-    color: #00b0ff;
-    background-color: transparent;
-  }
-  
-  .btn-outline:hover {
-    background-color: #00b0ff;
-    color: #000;
-  }
-  
-  /* NAVBAR */
+  /* ========== NAVBAR ========== */
   .navbar {
     display: flex;
     align-items: center;
@@ -86,20 +58,27 @@
     z-index: 999;
   }
   
-  .brand__logo {
-    font-size: 1.4rem;
-    color: #00b0ff;
-    font-weight: 700;
+  /* In dark mode, if you want the navbar to match background exactly: */
+  .dark-mode .navbar {
+    background-color: #111;
+  }
+  .light-mode .navbar {
+    background-color: #ddd;
   }
   
+  /* Brand & Toggle */
+  .brand__logo {
+    font-size: 1.4rem;
+    color: var(--accent-color);
+    font-weight: 700;
+  }
   .brand__toggle {
+    display: none;
     background: none;
     border: none;
-    display: none;
     flex-direction: column;
     cursor: pointer;
   }
-  
   .brand__toggle .bar {
     width: 25px;
     height: 3px;
@@ -107,23 +86,56 @@
     margin: 4px 0;
   }
   
+  /* Nav links */
   .navbar__links {
     list-style: none;
     display: flex;
     gap: 2rem;
   }
-  
   .navbar__links li a {
-    color: #fff;
     transition: color 0.3s ease;
   }
   
-  .navbar__links li a:hover,
-  .navbar__links li a.active {
-    color: #00b0ff;
+  /* ========== NAV HOVER ========== */
+  .nav-hover {
+    position: relative;
+    transition: color 0.3s ease;
+  }
+  .nav-hover::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    width: 0%;
+    height: 2px;
+    background-color: var(--accent-color);
+    transition: width 0.3s ease;
+  }
+  .nav-hover:hover {
+    color: var(--accent-color);
+  }
+  .nav-hover:hover::after {
+    width: 100%;
   }
   
-  /* HERO SECTION */
+  /* THEME TOGGLE BUTTON */
+  .theme-btn {
+    background: none;
+    border: 1px solid var(--accent-color);
+    color: var(--accent-color);
+    padding: 0.4rem 0.7rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+    margin-left: 1rem;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  .theme-btn:hover {
+    background-color: var(--accent-color);
+    color: #000;
+  }
+  
+  /* ========== HERO SECTION ========== */
   .hero-section {
     min-height: 80vh;
     background: url('../img/hero-bg.jpg') center/cover no-repeat;
@@ -131,198 +143,138 @@
     align-items: center;
     justify-content: center;
     text-align: center;
-    padding: 4rem 2rem;
     position: relative;
+    padding: 4rem 2rem;
+    overflow: hidden;
   }
-  
-  .hero-section::before {
-    content: "";
-    position: absolute;
-    top: 0; left: 0; right: 0; bottom: 0;
-    background: rgba(0,0,0,0.4);
-    z-index: 1;
-  }
-  
   .hero-content {
     position: relative;
     z-index: 2;
   }
-  
   .hero-title {
     font-size: 3rem;
     margin-bottom: 1rem;
   }
-  
   .hero-subtitle {
-    font-size: 1.2rem;
+    font-size: 1.4rem;
+    min-height: 2.2em;
     margin-bottom: 2rem;
   }
   
-  .hero-buttons .btn {
-    margin: 0 0.5rem;
+  /* WAVE DIVIDER */
+  .wave-divider {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    z-index: 2;
+  }
+  .wave-divider svg {
+    display: block;
+    width: calc(100% + 1.3px);
+    height: auto;
+    /* The wave color will adapt to dark/light mode if you want:
+       e.g. fill="currentColor" in the SVG path.
+       If you prefer a static color, remove "currentColor" in the path. */
   }
   
-  /* INTRO SECTION */
+  /* SCROLL DOWN ARROW */
+  .scroll-down {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-decoration: none;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    animation: bounce 2s infinite;
+    z-index: 9;
+  }
+  .scroll-down .arrow {
+    width: 2px;
+    height: 2px;
+    border-bottom: 3px solid var(--accent-color);
+    border-right: 3px solid var(--accent-color);
+    transform: rotate(45deg);
+    margin-bottom: 20px;
+    padding: 10px;
+  }
+  /* Keyframes for bounce */
+  @keyframes bounce {
+    0%, 100% { transform: translate(-50%, 0); }
+    50% { transform: translate(-50%, 10px); }
+  }
+  
+  /* ========== INTRO SECTION ========== */
   .intro-section {
     text-align: center;
+    margin-top: 2rem; /* Extra spacing from wave */
+  }
+  .intro-section p {
+    margin-bottom: 1rem;
   }
   
-  /* HIGHLIGHT PROJECTS */
+  /* ========== CARDS (PROJECT HIGHLIGHT) ========== */
   .highlight-projects {
     text-align: center;
   }
-  
   .cards {
     display: flex;
     flex-wrap: wrap;
     gap: 1rem;
     justify-content: center;
   }
-  
   .card {
     background-color: #111;
     width: 300px;
     padding: 1.5rem;
     border-radius: 8px;
     transition: transform 0.3s ease;
+    text-align: left;
   }
-  
-  .card:hover {
-    transform: translateY(-5px);
+  .dark-mode .card {
+    background-color: #111;
   }
-  
+  .light-mode .card {
+    background-color: #eee;
+    color: #000;
+  }
   .card h3 {
     margin-bottom: 0.5rem;
-    color: #00b0ff;
+    color: var(--accent-color);
   }
-  
   .card-link {
     display: inline-block;
     margin-top: 1rem;
-    color: #00b0ff;
     font-weight: 500;
+    color: var(--accent-color);
+  }
+  .card-hover {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  .card-hover:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 6px 15px rgba(0, 176, 255, 0.3);
   }
   
-  /* ABOUT SECTION */
-  .about-section .about-content {
-    display: flex;
-    align-items: center;
-    gap: 2rem;
-    flex-wrap: wrap;
-  }
-  
-  .about-text {
-    flex: 1 1 400px;
-  }
-  
-  .about-image img {
-    width: 300px;
-    height: auto;
-    border-radius: 50%;
-    border: 2px solid #00b0ff;
-  }
-  
-  /* PROJECTS PAGE */
-  .projects-section .project-item {
-    background-color: #111;
-    margin: 1rem 0;
-    padding: 1rem 1.5rem;
-    border-radius: 6px;
-  }
-  
-  .projects-section .project-item h2 {
-    color: #00b0ff;
-    margin-bottom: 0.5rem;
-  }
-  
-  /* EXPERIENCE PAGE */
-  .experience-section .timeline {
-    margin-top: 2rem;
-  }
-  
-  .timeline-block {
-    background-color: #111;
-    margin: 1rem 0;
-    padding: 1rem 1.5rem;
-    border-radius: 6px;
-  }
-  
-  .timeline-block h2 {
-    margin-bottom: 0.5rem;
-    color: #00b0ff;
-  }
-  
-  /* CONTACT PAGE */
-  .contact-section {
-    text-align: center;
-  }
-  
-  .contact-description {
-    margin: 1rem 0 2rem;
-    font-size: 1.1rem;
-  }
-  
-  .contact-details {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 2rem;
-    justify-content: center;
-    margin-bottom: 2rem;
-  }
-  
-  .info-block {
-    background-color: #111;
-    padding: 1rem 1.5rem;
-    width: 250px;
-    border-radius: 6px;
-  }
-  
-  .info-block h2 {
-    color: #00b0ff;
-    margin-bottom: 0.5rem;
-  }
-  
-  .info-block p a {
-    color: #fff;
-    font-weight: 500;
-  }
-  
-  .contact-form {
-    max-width: 600px;
-    margin: 0 auto;
-    text-align: left;
-  }
-  
-  .contact-form label {
-    display: block;
-    margin: 1rem 0 0.3rem;
-    font-weight: 600;
-  }
-  
-  .contact-form input,
-  .contact-form textarea {
-    width: 100%;
-    padding: 0.75rem;
-    margin-bottom: 0.5rem;
-    background-color: #222;
-    border: 1px solid #333;
-    border-radius: 4px;
-    color: #fff;
-  }
-  
-  .contact-form button {
-    margin-top: 1rem;
-    display: inline-block;
-  }
-  
-  /* FOOTER */
+  /* ========== FOOTER ========== */
   .footer {
     background-color: #111;
     text-align: center;
     padding: 1rem 2rem;
   }
+  .dark-mode .footer {
+    background-color: #111;
+  }
+  .light-mode .footer {
+    background-color: #ddd;
+    color: #000;
+  }
   
-  /* RESPONSIVE MEDIA QUERIES */
+  /* ========== RESPONSIVE MEDIA QUERIES ========== */
   @media (max-width: 768px) {
     .navbar__links {
       position: absolute;
@@ -333,108 +285,39 @@
       width: 200px;
       transform: translateX(100%);
       transition: transform 0.3s ease;
+      padding: 1rem 0;
     }
-  
     .navbar__links.show {
       transform: translateX(0);
     }
-  
     .brand__toggle {
       display: flex;
     }
-  
-    .about-section .about-content {
-      flex-direction: column;
-      text-align: center;
+    .hero-title {
+      font-size: 2.2rem;
+    }
+    .hero-subtitle {
+      font-size: 1.1rem;
     }
   }
+  
+  /* ========== CUSTOM CURSOR ========== */
+  #custom-cursor {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 25px;
+    height: 25px;
+    border: 2px solid var(--accent-color);
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 9999;
+    transform: translate(-50%, -50%);
+    transition: transform 0.08s ease-out;
+  }
+  
+  /* Optional: hide the OS cursor if you want only your custom circle */
   body {
-    font-family: 'Montserrat', sans-serif;
-    color: #fff;
-    background-color: #000;
-    /* Increase default line-height for better readability */
-    line-height: 1.7;
+    cursor: none;
   }
   
-  /* Container with extra vertical spacing */
-  .container {
-    width: 90%;
-    max-width: 1100px;
-    margin: 0 auto;
-    /* Increased top & bottom padding for breathing room */
-    padding: 3rem 1rem;
-  }
-  
-  /* NAV HOVER TRANSITIONS */
-  .nav-hover {
-    position: relative;
-    transition: color 0.3s ease;
-  }
-  .nav-hover::after {
-    content: "";
-    position: absolute;
-    left: 0; bottom: -2px;
-    width: 0%;
-    height: 2px;
-    background-color: #00b0ff;
-    transition: width 0.3s ease;
-  }
-  .nav-hover:hover {
-    color: #00b0ff;
-  }
-  .nav-hover:hover::after {
-    width: 100%;
-  }
-  
-  /* HERO SECTION WAVE */
-  .hero-section {
-    min-height: 80vh;
-    background: url('../img/hero-bg.jpg') center/cover no-repeat;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    position: relative;
-    padding: 4rem 2rem;
-  }
-  
-  .hero-content {
-    position: relative;
-    z-index: 2;
-    /* Increase spacing from top if needed */
-  }
-  
-  .wave-divider {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    overflow: hidden;
-    line-height: 0;
-    z-index: 2;
-  }
-  
-  .wave-divider svg {
-    display: block;
-    width: calc(100% + 1.3px); /* ensures no gap on wide screens */
-  }
-  
-  /* TYPED SUBTITLE STYLING */
-  .hero-subtitle {
-    font-size: 1.4rem;
-    min-height: 2.2em; /* so the text doesn't jump the layout if typed text is multiline */
-    margin-bottom: 2rem;
-  }
-  
-  /* CARDS HOVER TRANSITION */
-  .card-hover {
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-  }
-  .card-hover:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 6px 15px rgba(0, 176, 255, 0.3);
-  }
-  
-  /* EXTRA SPACING FOR INTRO TEXT */
-  .intro-section p {
-    margin-bottom: 1rem;
-  }
