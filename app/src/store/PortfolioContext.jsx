@@ -16,6 +16,14 @@ const defaultData = {
   education: [
     { id: 'ed1', title: 'Texas A&M University', date: 'Aug 2025 - May 2029', description: 'BS in Computer Science & Mathematics', bullets:[] },
     { id: 'ed2', title: 'Obra D. Tompkins High School', date: '2021 - 2025', description: 'High School Diploma with AP coursework', bullets:[] }
+  ],
+  awards: [
+    { id: 'a1', title: 'Dean\'s List', date: 'Fall 2024', description: 'Academic honors for high GPA.' },
+    { id: 'a2', title: 'Hackathon Finalist', date: '2023', description: 'Built a working prototype over 24 hours.' }
+  ],
+  featured: [
+    { id: 'f1', title: 'Interview with Local News', source: 'Katy ISD Times', url: 'https://example.com/article', date: '2024', description: 'Discussed building student-focused tools.' },
+    { id: 'f2', title: 'Project Spotlight', source: 'Tech Student Blog', url: 'https://example.com/spotlight', date: '2023', description: 'Highlight on Gradus App and its impact.' }
   ]
 }
 
