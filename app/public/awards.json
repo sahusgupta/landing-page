@@ -1,0 +1,41 @@
+{
+  "awards": [
+    {
+      "id": "a1",
+      "title": "President's Endowed Scholarship",
+      "date": "Fall 2025",
+      "description": "Awarded to National Merit Finalists and Brown Scholars at Texas A&M, ~ 300 active recipients. Recieved $2k scholarship for academic performance."
+    },
+    {
+      "id": "a2",
+      "title": "National Merit Finalist",
+      "date": "February 2025",
+      "description": "Awarded to top 15,000 scoring in the class of 2025 globally on the PSAT, earning $40,000 in scholarships from Texas A&M."
+    },
+    {
+      "id": "a3",
+      "title": "Team Tennis Academic All-State First Team",
+      "date": "May 2024",
+      "description": "Awarded to top 200 senior tennis players in Texas for elite academic and athletic performance, minimum qualifying cumulative GPA of 92."
+    },
+    {
+      "id": "a4",
+      "title": "NASA Space Apps Challenge - International Honorable Mention and Global Nominee",
+      "date": "November 2024",
+      "description": "FarmVis was named a Global Nominee (top 10% globally) and was designated an Honorable Mention (top 60 projects / 10,000+ submitted)"
+    },
+    {
+      "id": "a5",
+      "title": "NASA Space Apps Challenge - Houston Regional Winner",
+      "date": "October 2024",
+      "description": "Worked with partner to build FarmVis - an app leveraging NASA data to empower farmers with data-driven suggestions, nominated for Best Use of Technology and overall winner."
+    },
+
+    {
+      "id": "a6",
+      "title": "AP Scholar with Distinction",
+      "date": "June 2024",
+      "description": "Awarded by College Board for earning an average score of at least 3.5 on all AP Exams taken, and scores of 3 or higher on five or more of these exams."
+    }
+  ]
+}

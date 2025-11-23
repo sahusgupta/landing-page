@@ -1,0 +1,18 @@
+{
+  "experience": [
+    {
+      "id": "w1",
+      "title": "App & Software Development Intern - Funtastik Labs",
+      "date": "Jun 2025 - Aug 2025",
+      "description": "Redesigned field trip management system by building a full-stack web and mobile application. (20 hrs/week)",
+      "bullets": ["Streamlined internal management speed by 15%, improving client-business communications.", "Built a web app for client-side field trip quote generation and scheduling, and a mobile app to improve management of quotes and client communication, writing and optimizing over 3,000 lines of code"]
+    },
+    {
+      "id": "w2",
+      "title": "Cofounder & CTO - Plato AI",
+      "date": "May 2023 - October 2023",
+      "description": "Developed an AI-powered platform that provided affordable and personalized college essay guidance to high school seniors. (30 hrs/week)",
+      "bullets": ["Engineered a scalable essay feedback system that supported 4,000+ students globally, reducing the average essay critique time to < 2 minutes through a proprietary AI model, building with a small core team of 3.", "Optimized SQL queries and indexed key tables, resulting in a 20%  reduction in average query execution time."]
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "education": [
+    {
+      "id": "ed1",
+      "title": "Texas A&M University",
+      "date": "Aug 2025 - May 2029",
+      "description": "BS in Computer Science & Mathematics",
+      "bullets": ["Minor in Honors Academy, Mathematics, and Economics", "Clubs and Activities: Aggies Create, TAMU ThinkTank, Aggie Data Science Club, TAMU Hack, Aggies in Consulting, Aggies in Tech.", "Honors: President's Endowed Scholarship"]
+    },
+    {
+      "id": "ed2",
+      "title": "Obra D. Tompkins High School",
+      "date": "2021 - 2025",
+      "description": "High School Diploma with AP coursework",
+      "bullets": ["Clubs and Activities: Varsity Tennis, CS Club", "Honors: National Merit Finalist, Team Tennis Academic All-State First Team, AP Scholar with Distinction"]
+    }
+  ]
+}

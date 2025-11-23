@@ -14,6 +14,13 @@ function ResumeCard({ item, badge }) {
       {item.subtitle && <div className="small muted">{item.subtitle}</div>}
       {item.description && <p className="muted">{item.description}</p>}
       {item.source && <div className="small muted">{item.source}</div>}
+      {Array.isArray(item.bullets) && item.bullets.length > 0 && (
+        <ul className="bullet-list">
+          {item.bullets.map((point, idx) => (
+            <li key={idx}>{point}</li>
+          ))}
+        </ul>
+      )}
       {item.url && <a className="ghost-link" href={item.url} target="_blank" rel="noreferrer">View</a>}
     </article>
   )

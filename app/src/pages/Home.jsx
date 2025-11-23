@@ -73,12 +73,6 @@ function InfoCard({item, tag}){
 export default function Home(){
   const { data } = useContext(PortfolioContext)
 
-  // lock scrolling only on the Home page
-  useEffect(()=>{
-    document.body.classList.add('no-scroll')
-    return ()=> document.body.classList.remove('no-scroll')
-  }, [])
-
   return (
     <div className="home-shell">
       <section className="hero-new container">

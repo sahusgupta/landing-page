@@ -1,0 +1,104 @@
+{
+  "projects": [
+    {
+      "id": "p1",
+      "title": "PlatoAI",
+      "image": "/images/PlatoAI.svg",
+      "tech": ["Flask", "JavaScript", "PostgreSQL", "OAuth v2", "OpenAI API"],
+      "description": "AI-powered college essay guidance platform with secure OAuth sign-in, revision history, and rubric-aware feedback scoring, serving over 3.5k students.",
+      "status": "Live",
+      "liveUrl": "https://platoai.org",
+      "repoUrl": "https://github.com/sahusgupta/plato-ai"
+    },
+    {
+      "id": "p2",
+      "title": "RealTalk",
+      "image": "/images/RealTalk.svg",
+      "tech": ["React", "Next.js", "Tailwind CSS", "Python", "Flask", "OpenAI Whisper", "MySQL"],
+      "description": "An AI-powered resume and interview analysis platform that helps applicants refine their resumes and practice interview skills, while also helping recruiters find / filter for candidates that actually meet their requirements.",
+      "status": "Live",
+      "liveUrl": "https://realtalklabs.com",
+      "repoUrl": "https://github.com/sahusgupta/AInterview"
+    },
+    {
+      "id": "p3",
+      "title": "Rust Compiler",
+      "image": "Coming Soon!",
+      "tech": ["Rust", "Compilers"],
+      "description": "A from-scratch compiler project in Rust that parses, type-checks, and lowers a small language into executable code.",
+      "status": "Finished",
+      "liveUrl": "",
+      "repoUrl": ""
+    },
+    {
+      "id": "p4",
+      "title": "RL Framework for Gaming Agents",
+      "image": "Coming Soon!",
+      "tech": [],
+      "description": "A reinforcement learning framework for training, comparing, and evaluating gaming agents across environments and algorithms.",
+      "status": "In progress",
+      "liveUrl": "",
+      "repoUrl": ""
+    },
+    {
+      "id": "p5",
+      "title": "AI Parlay Builder",
+      "image": "Coming Soon!",
+      "tech": [],
+      "description": "A system that models leg win probabilities, computes implied odds and expected value for candidate parlays, and ranks bets by risk-adjusted EV.",
+      "status": "In progress",
+      "liveUrl": "",
+      "repoUrl": ""
+    },
+    {
+      "id": "p6",
+      "title": "Thesys AI",
+      "image": "Coming Soon!",
+      "tech": ["PostgreSQL", "Python", "LangChain", "OpenAI API", "Pinecone", "React.js", "Next.js", "Tailwind CSS"],
+      "description": "A context-aware research agent that reads sources, tracks citations, and generates structured notes tailored to a user's questions.",
+      "status": "Beta",
+      "liveUrl": "",
+      "repoUrl": "https://github.com/sahusgupta/thesys-ai"
+    },
+    {
+      "id": "p7",
+      "title": "Gradus App",
+      "image": "/images/Gradus.svg",
+      "tech": ["Flutter", "Puppeteer.js", "Python", "Golang", "Firebase"],
+      "description": "Collaborative grade-tracking app that scrapes and aggregates Katy ISD reports with headless Puppeteer jobs and delivers real-time insights via Flutter.",
+      "status": "Live",
+      "liveUrl": "",
+      "repoUrl": "https://github.com/sahusgupta/gradeyay"
+    },
+    {
+      "id": "p8",
+      "title": "RevOS",
+      "image": "/images/RevOS.svg",
+      "tech": ["React", "Node.js", "MySQL", "Python", "Pinecone", "Flask"],
+      "description": "A data-driven web app that helps students manage finances, upcoming assignments, syllabi, and set priorities for the upcoming week. Submitted to HowdyHack 2025.",
+      "status": "Prototype",
+      "liveUrl": "",
+      "repoUrl": "https://github.com/sahusgupta/RevOS"
+    },
+    {
+      "id": "p9",
+      "title": "Poker Solver",
+      "image": "Coming Soon!",
+      "tech": [],
+      "description": "A tool for analyzing poker spots and strategies using game-theoretic concepts and simulation to suggest better lines.",
+      "status": "In progress",
+      "liveUrl": "",
+      "repoUrl": ""
+    },
+    {
+      "id": "p10",
+      "title": "Finance Manager Tool",
+      "image": "Coming Soon!",
+      "tech": [],
+      "description": "A personal dashboard that tracks cash flow with simple analytics.",
+      "status": "Planned",
+      "liveUrl": "",
+      "repoUrl": ""
+    }
+  ]
+}

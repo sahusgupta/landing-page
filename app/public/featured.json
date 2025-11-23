@@ -1,0 +1,20 @@
+{
+  "featured": [
+    {
+      "id": "f1",
+      "title": "Tompkins High School Students Soar at NASA's Global App Design Challenge",
+      "source": "Katy Times",
+      "url": "https://katytimes.com/stories/tompkins-high-school-students-soar-at-nasas-global-app-design-challenge,100442",
+      "date": "2025",
+      "description": "Discussed our performance and journey at Space Apps 2024"
+    },
+    {
+      "id": "f2",
+      "title": "Dozens of Katy ISD Students Named National Merit Scholarship Semifinalists",
+      "source": "Covering Katy News",
+      "url": "https://coveringkaty.com/education/dozens-of-katy-isd-students-named-national-merit-scholarship/",
+      "date": "2024",
+      "description": "Spotlights Katy ISD's National Merit Semifinalists."
+    }
+  ]
+}
