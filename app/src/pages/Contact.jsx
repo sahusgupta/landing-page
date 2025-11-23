@@ -8,13 +8,8 @@ const contactOptions = [
     action: { label: 'Email sahusgupta@tamu.edu', href: 'mailto:sahusgupta@tamu.edu' }
   },
   {
-    title: 'Project inquiry',
-    description: 'Have an idea or need a build partner? Share a few lines and we can scope it.',
-    action: { label: 'Start with email', href: 'mailto:sahusgupta@tamu.edu?subject=Project%20inquiry' }
-  },
-  {
     title: 'Learn more',
-    description: 'Browse my recent work and roles while you wait for a reply.',
+    description: 'Browse my recent work and roles.',
     links: [
       { label: 'View projects', to: '/projects' },
       { label: 'Resume', to: '/resume' }
