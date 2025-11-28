@@ -23,8 +23,6 @@ export default function Contact(){
       <div className="contact-hero contact-cta">
         <div>
           <p className="eyebrow">Let&apos;s talk</p>
-          <h1>Ready to collaborate?</h1>
-          <p className="muted">I keep my inbox open for interesting problems, internships, and collaborations. Drop a line and I&apos;ll get back within 24 hours.</p>
         </div>
         <a className="btn primary" href="mailto:sahusgupta@tamu.edu">Email me</a>
       </div>
